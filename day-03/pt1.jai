@@ -40,6 +40,7 @@ main :: () {
 
         totals[totals.count - position_in_line] += byte - #char "0";
     }
+    free(buffer);
 
     gamma_array: [12] bool;
     for totals {

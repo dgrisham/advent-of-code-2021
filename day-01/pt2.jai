@@ -9,6 +9,7 @@ main :: () {
         print("Failed to read file '%'\n", infile);
         exit(1);
     }
+    defer free(str);
 
     prev, next : [3] int;
 
