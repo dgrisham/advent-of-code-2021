@@ -59,9 +59,9 @@ main :: () {
 read_line :: (text: *string) -> Move, bool, string {
 
     move, success, err := read_move(text);
-    if !success  return move, false, tprint("Failed to parse move: %", err);
+    if !success return move, false, tprint("Failed to parse move: %", err);
 
-    if !is_newline((<<text)[0])  return move, false, "Failed to parse newline after move";
+    if !is_newline((<<text)[0]) return move, false, "Failed to parse newline after move";
     advance(text, 1);
 
     return move, true, "";
