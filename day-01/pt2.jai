@@ -1,6 +1,5 @@
 #import "Basic";
 #import "File";
-#import "String";
 
 main :: () {
 
