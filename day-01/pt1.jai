@@ -10,8 +10,7 @@ main :: () {
         exit(1);
     }
 
-    prev : int;
-    next : int;
+    prev, next : int;
 
     total := 0;
     done := false;
@@ -27,8 +26,7 @@ main :: () {
         }
         numbers_read += 1;
 
-        prev = next;
-        next = n;
+        prev, next = next, n;
 
         if numbers_read > 1 && next > prev  total += 1;
 
