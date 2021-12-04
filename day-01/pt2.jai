@@ -11,8 +11,7 @@ main :: () {
         exit(1);
     }
 
-    prev : [3]int;
-    next : [3]int;
+    prev, next : [3] int;
 
     total := 0;
     done := false;
@@ -28,9 +27,7 @@ main :: () {
         }
         numbers_read += 1;
 
-        prev[0] = next[0];
-        prev[1] = next[1];
-        prev[2] = next[2];
+        for next  prev[it_index] = it;
 
         next[0] = prev[1];
         next[1] = prev[2];
