@@ -36,7 +36,6 @@ main :: () {
         move, parse_success, err := read_line(*input);
         if !parse_success {
             print("Error parsing line %: %\n", line_number, err);
-            print("Failed line: %\n", stop_at_any(input, "\n"));
             exit(1);
         }
         line_number += 1;
