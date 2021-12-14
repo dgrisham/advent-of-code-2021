@@ -50,6 +50,7 @@ main :: () {
         bit_index := position_in_line - 1;
         all_values[line_number].data[bit_index] = cast(bool) (byte - #char "0");
     }
+    file_close(*file);
 
     oxygen_values := array_copy(all_values);
     co2_values    := array_copy(all_values);
