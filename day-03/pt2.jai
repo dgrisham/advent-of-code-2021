@@ -1,7 +1,5 @@
 #import "Basic";
 #import "File";
-#import "String";
-
 
 infile :: "input";
 
