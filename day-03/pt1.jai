@@ -15,11 +15,12 @@ main :: () {
 
     totals := u64.[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
+    lines_in_file: u64 = 0;
+
     // read input file one byte at a time
     bytes_read := 0;
     bytes_in_file := file_length(file);
     buffer := cast(*u8) alloc(1);
-    lines_in_file: u64 = 0;
     position_in_line := 0;
     while bytes_read < bytes_in_file {
 
