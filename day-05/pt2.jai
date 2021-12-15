@@ -19,7 +19,7 @@ main :: () {
     lines: [..] LineSegment;
 
     line_number := 0;
-    x_min, x_max, y_min, y_max := 0;
+    board_x_min, board_x_max, board_y_min, board_y_max := 0;
     while true {
         if input.count == 0 break;
         line_segment, success, err := read_line(*input);
@@ -28,17 +28,17 @@ main :: () {
         line_number += 1;
 
         using line_segment;
-        x_min = min(min(start.x, end.x), x_min);
-        x_max = max(max(start.x, end.x), x_max);
+        board_x_min = min(min(start.x, end.x), board_x_min);
+        board_x_max = max(max(start.x, end.x), board_x_max);
 
-        y_min = min(min(start.y, end.y), y_min);
-        y_max = max(max(start.y, end.y), y_max);
+        board_y_min = min(min(start.y, end.y), board_y_min);
+        board_y_max = max(max(start.y, end.y), board_y_max);
     }
 
     board: [] [] int;
-    board = NewArray(x_max - x_min + 1, [] int, initialized=false);
+    board = NewArray(board_x_max - board_x_min + 1, [] int, initialized=false);
     for *board {
-        <<it = NewArray(y_max - y_min + 1, int);
+        <<it = NewArray(board_y_max - board_y_min + 1, int);
     }
 
     for line: lines {
